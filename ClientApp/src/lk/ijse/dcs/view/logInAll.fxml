@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logInAllAnchPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.LogInAllController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="510.0" fitWidth="807.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/loginAllBack.jpg" />
+               </image></ImageView>
+            <Pane prefHeight="500.0" prefWidth="800.0">
+               <children>
+                  <Pane layoutX="478.0" layoutY="92.0" opacity="0.6" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #0099CC; -fx-border-width: 2px;">
+                     <children>
+                        <Label layoutX="38.0" layoutY="48.0" text="LogIn Here, ">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="userNameTF" focusColor="#0099cc" labelFloat="true" layoutX="40.0" layoutY="108.0" onAction="#userNameTF_onAction" prefHeight="32.0" prefWidth="225.0" promptText="Username">
+                           <font>
+                              <Font name="Century Gothic Italic" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="passwordPF" focusColor="#0099cc" labelFloat="true" layoutX="39.0" layoutY="190.0" onAction="#passwordPF_onAction" prefHeight="32.0" prefWidth="225.0" promptText="Password">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="logInBtn" buttonType="RAISED" layoutX="107.0" layoutY="272.0" onAction="#logInBtn_onAction" prefHeight="32.0" prefWidth="92.0" styleClass="logInBtn" stylesheets="@style/login.css" text="Log In">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label fx:id="warningLbl" layoutX="38.0" layoutY="243.0" mouseTransparent="true" text=" " textFill="#df574b">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="230.0" layoutY="476.0" text="Developed by Me(Thushara Supun) In 2K18 @IJSE" textFill="#515658">
+                     <font>
+                        <Font name="Mark My Words" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="99.0" fitWidth="115.0" layoutX="26.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="115.0" layoutY="322.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/heartBeat_moniter.gif" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="welcomeTxtLbl" layoutX="511.0" layoutY="30.0" prefHeight="41.0" prefWidth="254.0" text="WelCome..." textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="204.0" text="New Philip Hospitals" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded   Regular 2" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="267.0" text="Doctor Channelling System">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="142.0" layoutY="37.0" text="NEW PHILIP HOSPITALS">
+                     <font>
+                        <Font name="Humanist 521 Bold BT" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="215.0" layoutY="71.0" text="Where Caring Comes First..." textFill="#515658">
+                     <font>
+                        <Font name="Bradley Hand ITC" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

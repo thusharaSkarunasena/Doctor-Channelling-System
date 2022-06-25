@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="doctorMainDashAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.DoctorMainDashController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="950.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane prefHeight="120.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="273.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/new-philip-hospitals-rect.gif" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="mainTitle" alignment="CENTER" layoutX="282.0" layoutY="50.0" prefHeight="31.0" prefWidth="386.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                           <font>
+                              <Font name="Ciutadella Rounded   Regular 2" size="28.0" />
+                           </font>
+                        </Label>
+                        <JFXHamburger fx:id="mainDashHamburger" layoutX="897.0" layoutY="76.0" prefHeight="35.0" prefWidth="35.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXHamburger>
+                        <Label fx:id="dateLbl" layoutX="783.0" layoutY="14.0" prefHeight="18.0" prefWidth="167.0" style="-fx-text-alignment: center;" text="Date" textAlignment="CENTER" textFill="#0d293e">
+                           <font>
+                              <Font name="DigifaceWide Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="timeLbl" layoutX="783.0" layoutY="35.0" prefHeight="30.0" prefWidth="147.0" style="-fx-text-alignment: center;" text="Time" textAlignment="CENTER" textFill="#0d293e">
+                           <font>
+                              <Font name="DigifaceWide Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <ImageView fitHeight="537.0" fitWidth="950.0" layoutY="120.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/mainDashBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="120.0" prefHeight="545.0" prefWidth="950.0">
+               <children>
+                  <Label layoutX="328.0" layoutY="505.0" text="Developed by Me(Thushara Supun) In 2K18 @IJSE" textFill="#515658">
+                     <font>
+                        <Font name="Mark My Words" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectionTitleLbl" alignment="CENTER" layoutX="158.0" layoutY="305.0" prefHeight="41.0" prefWidth="633.0" style="-fx-text-alignment: center;" text="Selection Title" textFill="#0099cc">
+                     <font>
+                        <Font name="Century Gothic Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectionDescriptionLbl" alignment="CENTER" layoutX="160.0" layoutY="363.0" prefHeight="30.0" prefWidth="633.0" style="-fx-text-alignment: center;" text="Selection Description" textFill="#081b29">
+                     <font>
+                        <Font name="Accidental Presidency" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXDrawer fx:id="mainDashDrawer" defaultDrawerSize="50.0" direction="RIGHT" layoutX="890.0" opacity="0.9" prefHeight="530.0" prefWidth="60.0" />
+                  <ImageView fx:id="treatmentIcon" fitHeight="120.0" fitWidth="120.0" layoutX="158.0" layoutY="96.0" onMouseClicked="#treatmentIcon_onMouseClicked" onMouseEntered="#doctorMainDashIcon_onMouseEntered" onMouseExited="#doctorMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/stethoscope1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="previousTreatmentsIcon2" fitHeight="120.0" fitWidth="120.0" layoutX="671.0" layoutY="90.0" onMouseClicked="#previousTreatmentsIcon_onMouseClicked" onMouseEntered="#doctorMainDashIcon_onMouseEntered" onMouseExited="#doctorMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/stethoscope2.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="previousTreatmentsIcon1" fitHeight="60.0" fitWidth="60.0" layoutX="658.0" layoutY="142.0" mouseTransparent="true">
+                     <image>
+                        <Image url="@../asset/icons8_Past_64px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="manageMedicinesIcon" fitHeight="120.0" fitWidth="120.0" layoutX="417.0" layoutY="96.0" onMouseClicked="#manageMedicinesIcon_onMouseClick" onMouseEntered="#doctorMainDashIcon_onMouseEntered" onMouseExited="#doctorMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/pills.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+.searchPatientBtn{
+    -fx-background-color: #0099CC;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #0099CC;
+    -fx-border-width: 2;
+}
+
+.searchPatientBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #0099CC;
+    -fx-border-color: #0099CC;
+    -fx-border-width: 2;
+}
+
+.confirmAndDoneBtn{
+    -fx-background-color: #00BD93;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.confirmAndDoneBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #00BD93;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.clearBtn{
+    -fx-background-color: #FF7800;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.clearBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #FF7800;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.cancelBtn{
+    -fx-background-color: #DF574B;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.cancelBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #DF574B;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.subBtns{
+    -fx-background-color: linear-gradient(to left, #92fe9d 0%, #00c9ff 100%);
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: linear-gradient(to left, #92fe9d 0%, #00c9ff 100%);
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.subBtns:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: linear-gradient(to left, #92fe9d 0%, #00c9ff 100%);
+    -fx-border-color: linear-gradient(to left, #92fe9d 0%, #00c9ff 100%);
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}

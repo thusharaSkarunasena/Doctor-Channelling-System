@@ -1,0 +1,37 @@
+
+.userProfile-ApplyBtn{
+    -fx-background-color: #0099CC;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.userProfile-ApplyBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #0099CC;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.userProfile-lbl{
+    
+}
+
+.userProfile-lbl:hover{
+    -fx-text-fill: #4059a9;
+    -fx-font-size: 13;
+}
+
+.userProfile-okBtn{
+    
+}
+
+.userProfile-okBtn:hover{
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-text-fill: #0099CC;
+}

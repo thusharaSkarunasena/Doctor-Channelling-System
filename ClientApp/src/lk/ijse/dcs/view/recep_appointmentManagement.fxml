@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="recep_appointmentAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Recep_AppointmentManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="11.0" layoutY="11.0" prefHeight="565.0" prefWidth="368.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXButton fx:id="searchPatientBtn" buttonType="RAISED" layoutX="252.0" layoutY="25.0" onAction="#searchPatientBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="searchPatientBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Search">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="patientDetailsConfirmBtn" buttonType="RAISED" layoutX="249.0" layoutY="524.0" onAction="#patientDetailsConfirmBtn_onAction" prefHeight="30.0" prefWidth="88.0" styleClass="confirmBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Confirm &gt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="patientDetailsClearBtn" buttonType="RAISED" layoutX="126.0" layoutY="524.0" onAction="#patientDetailsClearBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="clearBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Clear">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXRadioButton fx:id="femaleRadioBtn" layoutX="182.0" layoutY="136.0" mouseTransparent="true" style="-jfx-selected-color: #00a1cb;" text="Female">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="patientSex" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="maleRadioBtn" layoutX="49.0" layoutY="136.0" mouseTransparent="true" style="-jfx-selected-color: #00a1cb;" text="Male" toggleGroup="$patientSex">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <TextField fx:id="patientIDTF" layoutX="20.0" layoutY="28.0" onAction="#patientIDTF_onAction" prefHeight="25.0" prefWidth="206.0" promptText="Patient ID" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="reserveAppointmentPane" layoutX="390.0" layoutY="10.0" prefHeight="565.0" prefWidth="550.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXButton fx:id="reserveAppointmentBtn" buttonType="RAISED" layoutX="406.0" layoutY="511.0" onAction="#reserveAppointmentBtn_onAction" prefHeight="30.0" prefWidth="103.0" styleClass="confirmBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Reserve &gt;&gt;&gt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="appointmentClearBtn" buttonType="RAISED" layoutX="281.0" layoutY="511.0" onAction="#appointmentClearBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="clearBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Clear">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <TextField fx:id="appointmentNoTF" editable="false" layoutX="22.0" layoutY="26.0" mouseTransparent="true" prefHeight="25.0" prefWidth="213.0" promptText="Appointment Number" />
+                        <JFXDatePicker fx:id="appointmentDateDP" defaultColor="#00a1cb" editable="false" layoutX="286.0" layoutY="21.0" onAction="#appointmentDateDP_onAction" prefHeight="17.0" prefWidth="240.0" />
+                        <JFXComboBox fx:id="appointmentTypeComboBox" focusColor="#00a1cb" labelFloat="true" layoutX="22.0" layoutY="79.0" onAction="#appointmentTypeComboBox_onAction" prefHeight="25.0" prefWidth="213.0" promptText="Channelling Category" />
+                        <JFXComboBox fx:id="doctorNameComboBox" focusColor="#00a1cb" labelFloat="true" layoutX="286.0" layoutY="79.0" onAction="#doctorNameComboBox_onAction" prefHeight="25.0" prefWidth="213.0" promptText="Doctor's Name" />
+                        <JFXTextArea fx:id="detailsTA" focusColor="#00a1cb" labelFloat="true" layoutX="14.0" layoutY="154.0" prefHeight="94.0" prefWidth="523.0" promptText="Details" />
+                        <JFXTextArea fx:id="otherDescriptionTA" focusColor="#00a1cb" labelFloat="true" layoutX="14.0" layoutY="298.0" prefHeight="94.0" prefWidth="523.0" promptText="Other Description" />
+                        <Label layoutX="14.0" layoutY="441.0" text="Queue Number : ">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="queueNumberTF" editable="false" layoutX="193.0" layoutY="430.0" mouseTransparent="true" prefHeight="47.0" prefWidth="153.0" promptText="Q Number">
+                           <font>
+                              <Font name="Century Gothic Bold" size="24.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton fx:id="appointmentCancelBtn" buttonType="RAISED" layoutX="165.0" layoutY="511.0" onAction="#appointmentCancelBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="cancelBtn" stylesheets="@style/recep_appointmentmanagement.css" text="Cancel">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <JFXTextField fx:id="nameTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="33.0" layoutY="83.0" mouseTransparent="true" prefHeight="25.0" prefWidth="281.0" promptText="Name">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="nicTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="33.0" layoutY="368.0" mouseTransparent="true" prefHeight="25.0" prefWidth="281.0" promptText="NIC">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="28.0" layoutY="125.0" text="Sex" textFill="#8f8f8f" />
+                  <Label layoutX="26.0" layoutY="186.0" text="Date of Birth" textFill="#8f8f8f" />
+                  <JFXDatePicker fx:id="dateOfBirthDP" defaultColor="#00a1cb" editable="false" layoutX="42.0" layoutY="212.0" mouseTransparent="true" prefHeight="28.0" prefWidth="268.0" promptText="Date of Birth" />
+                  <JFXTextArea fx:id="addressTA" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="33.0" layoutY="272.0" mouseTransparent="true" prefHeight="60.0" prefWidth="281.0" promptText="Address">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXTextField fx:id="contactNumberHomeTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="49.0" layoutY="443.0" mouseTransparent="true" prefHeight="25.0" prefWidth="179.0" promptText="Home">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="contactNumberMobileTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="49.0" layoutY="494.0" mouseTransparent="true" prefHeight="25.0" prefWidth="179.0" promptText="Mobile">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="27.0" layoutY="415.0" text="Contact Number" textFill="#8f8f8f" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

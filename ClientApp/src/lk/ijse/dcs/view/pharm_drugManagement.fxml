@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pharm_drugManagementAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Pharm_DrugManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="8.0" layoutY="537.0" prefHeight="50.0" prefWidth="935.0" style="-fx-border-radius: 10; -fx-border-color: #C7C7C7; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXButton fx:id="newBtn" buttonType="RAISED" layoutX="268.0" layoutY="10.0" onAction="#newBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-newBtn" stylesheets="@style/pharm_drugmanagement.css" text="New">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="380.0" layoutY="10.0" onAction="#saveBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-saveBtn" stylesheets="@style/pharm_drugmanagement.css" text="Save">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="607.0" layoutY="10.0" onAction="#deleteBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-deleteBtn" stylesheets="@style/pharm_drugmanagement.css" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="493.0" layoutY="10.0" onAction="#updateBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-updateBtn" stylesheets="@style/pharm_drugmanagement.css" text="Update">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="11.0" layoutY="4.0" prefHeight="528.0" prefWidth="349.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXTextArea fx:id="descriptionTA" focusColor="#00a1cb" labelFloat="true" layoutX="35.0" layoutY="300.0" prefHeight="87.0" prefWidth="280.0" promptText="Description">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="brandTF" focusColor="#00a1cb" labelFloat="true" layoutX="35.0" layoutY="210.0" onAction="#brandTF_onAction" prefHeight="25.0" prefWidth="280.0" promptText="Brand">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="unitPriceTF" focusColor="#00a1cb" labelFloat="true" layoutX="35.0" layoutY="450.0" onAction="#unitPriceTF_onAction" prefHeight="25.0" prefWidth="280.0" promptText="Unit Price">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="368.0" layoutY="4.0" prefHeight="528.0" prefWidth="572.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="searchBoxTF" layoutX="14.0" layoutY="14.0" onKeyReleased="#searchBoxTF_keyReleased" onMouseClicked="#searchBox_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="185.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="drugManagementTbl" layoutX="13.0" layoutY="51.0" onMouseClicked="#drugManagementTbl_OnMouseClick" prefHeight="463.0" prefWidth="547.0">
+                           <columns>
+                              <TableColumn maxWidth="80.0" text="Drug Code" />
+                              <TableColumn maxWidth="155.0" prefWidth="155.0" text="Name" />
+                              <TableColumn maxWidth="175.0" prefWidth="175.0" text="Description" />
+                              <TableColumn maxWidth="135.0" prefWidth="135.0" text="Unit Price" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <JFXTextField fx:id="drugCodeTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="45.0" layoutY="45.0" mouseTransparent="true" prefHeight="25.0" prefWidth="280.0" promptText="Drug Code">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="nameTF" focusColor="#00a1cb" labelFloat="true" layoutX="45.0" layoutY="130.0" onAction="#nameTF_onAction" prefHeight="25.0" prefWidth="280.0" promptText="Name">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cashier_paymentHistoryAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Cashier_PaymentHistoryController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="24.0" layoutY="9.0" prefHeight="275.0" prefWidth="900.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="cashPaymentSearchBoxTF" layoutX="594.0" layoutY="14.0" onKeyReleased="#cashPaymentSearchBoxTF_keyReleased" onMouseClicked="#cashPaymentSearchBoxTF_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="765.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="61.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons8_Cash_in_Hand_48px_3.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="115.0" layoutY="19.0" text="Cash Payment">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="24.0" layoutY="301.0" prefHeight="275.0" prefWidth="900.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="cardPaymentSearchBoxTF" layoutX="600.0" layoutY="14.0" onKeyReleased="#cardPaymentSearchBoxTF_keyReleased" onMouseClicked="#cardPaymentSearchBoxTF_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="771.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="cardPaymentHistoryTbl" layoutX="23.0" layoutY="55.0" prefHeight="206.0" prefWidth="852.0">
+                           <columns>
+                              <TableColumn text="Date" />
+                              <TableColumn maxWidth="200.0" prefWidth="107.0" text="Appointment NO" />
+                              <TableColumn maxWidth="100.0" prefWidth="92.0" text="Patient ID" />
+                              <TableColumn maxWidth="124.0" prefWidth="100.0" text="Payment NO" />
+                              <TableColumn maxWidth="140.0" prefWidth="105.0" text="Total" />
+                              <TableColumn maxWidth="151.0" prefWidth="82.0" text="Discount" />
+                              <TableColumn maxWidth="185.0" prefWidth="109.0" text="Payble Total" />
+                              <TableColumn maxWidth="192.00006103515625" prefWidth="77.0" text="Card Type" />
+                              <TableColumn maxWidth="192.00006103515625" prefWidth="99.0" text="Card Number" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons8_Card_Payment_56px_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="115.0" layoutY="18.0" text="Card Payment">
+                           <font>
+                              <Font name="Century Gothic Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <TableView fx:id="cashPaymentHistoryTbl" layoutX="44.0" layoutY="61.0" prefHeight="206.0" prefWidth="852.0">
+                     <columns>
+                        <TableColumn prefWidth="85.0" text="Date" />
+                        <TableColumn maxWidth="200.0" prefWidth="105.0" text="Appointment NO" />
+                        <TableColumn maxWidth="143.0" prefWidth="104.0" text="Patient ID" />
+                        <TableColumn maxWidth="227.0" prefWidth="139.0" text="Payment NO" />
+                        <TableColumn maxWidth="295.0" prefWidth="100.0" text="Total" />
+                        <TableColumn maxWidth="321.0" prefWidth="106.0" text="Discount" />
+                        <TableColumn maxWidth="321.0" prefWidth="106.0" text="Payble Total" />
+                        <TableColumn maxWidth="321.0" prefWidth="106.0" text="Cash Payment" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

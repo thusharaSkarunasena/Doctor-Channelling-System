@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClientApp/ClientApp.iml" filepath="$PROJECT_DIR$/ClientApp/ClientApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonApp/CommonApp.iml" filepath="$PROJECT_DIR$/CommonApp/CommonApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Doctor Channelling System.iml" filepath="$PROJECT_DIR$/Doctor Channelling System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerApp/ServerApp.iml" filepath="$PROJECT_DIR$/ServerApp/ServerApp.iml" />
+    </modules>
+  </component>
+</project>

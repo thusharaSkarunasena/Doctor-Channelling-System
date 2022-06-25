@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="recep_patientAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Recep_PatientManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="8.0" layoutY="537.0" prefHeight="50.0" prefWidth="935.0" style="-fx-border-radius: 10; -fx-border-color: #C7C7C7; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXButton fx:id="newBtn" buttonType="RAISED" layoutX="268.0" layoutY="10.0" onAction="#newBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-newBtn" stylesheets="@style/recep_patientmanagement.css" text="New">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="380.0" layoutY="10.0" onAction="#saveBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-saveBtn" stylesheets="@style/recep_patientmanagement.css" text="Save">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="607.0" layoutY="10.0" onAction="#deleteBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-deleteBtn" stylesheets="@style/recep_patientmanagement.css" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="493.0" layoutY="10.0" onAction="#updateBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-updateBtn" stylesheets="@style/recep_patientmanagement.css" text="Update">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="11.0" layoutY="4.0" prefHeight="528.0" prefWidth="349.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <JFXTextField fx:id="nameTF" focusColor="#00a1cb" labelFloat="true" layoutX="23.0" layoutY="65.0" onAction="#nameTF_onAction" prefHeight="25.0" prefWidth="281.0" promptText="Name">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="patientIdTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="23.0" layoutY="14.0" mouseTransparent="true" prefHeight="25.0" prefWidth="281.0" promptText="Patient ID">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="nicTF" focusColor="#00a1cb" labelFloat="true" layoutX="23.0" layoutY="363.0" onAction="#nicTF_onAction" prefHeight="25.0" prefWidth="281.0" promptText="NIC">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="18.0" layoutY="112.0" text="Sex" textFill="#8f8f8f" />
+                        <JFXRadioButton fx:id="femaleRadioBtn" layoutX="183.0" layoutY="135.0" onAction="#femaleRadioBtn_onAction" style="-jfx-selected-color: #00a1cb;" text="Female">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="patientSex" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="maleRadioBtn" layoutX="50.0" layoutY="135.0" onAction="#maleRadioBtn_onAction" style="-jfx-selected-color: #00a1cb;" text="Male" toggleGroup="$patientSex">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                        <Label layoutX="16.0" layoutY="174.0" text="Date of Birth" textFill="#8f8f8f" />
+                        <JFXDatePicker fx:id="dateOfBirthDP" defaultColor="#00a1cb" editable="false" layoutX="32.0" layoutY="199.0" onAction="#dateOfBirthDP_onAction" prefHeight="28.0" prefWidth="268.0" promptText="Date of Birth" />
+                        <JFXTextArea fx:id="addressTA" focusColor="#00a1cb" labelFloat="true" layoutX="23.0" layoutY="264.0" prefHeight="60.0" prefWidth="281.0" promptText="Address">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="contactNumberHomeTF" focusColor="#00a1cb" labelFloat="true" layoutX="39.0" layoutY="436.0" onAction="#contactNumberHomeTF_onAction" prefHeight="25.0" prefWidth="179.0" promptText="Home">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="contactNumberMobileTF" focusColor="#00a1cb" labelFloat="true" layoutX="39.0" layoutY="487.0" onAction="#contactNumberMobileTF_onAction" prefHeight="25.0" prefWidth="179.0" promptText="Mobile">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="17.0" layoutY="408.0" text="Contact Number" textFill="#8f8f8f" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="368.0" layoutY="4.0" prefHeight="528.0" prefWidth="572.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="searchBoxTF" layoutX="14.0" layoutY="14.0" onKeyReleased="#searchBoxTF_keyReleased" onMouseClicked="#searchBox_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="185.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="patientManagementTbl" layoutX="13.0" layoutY="51.0" onMouseClicked="#patientManagementTbl_OnMouseClick" prefHeight="463.0" prefWidth="547.0">
+                           <columns>
+                              <TableColumn maxWidth="80.0" text="Patient ID" />
+                              <TableColumn maxWidth="135.0" prefWidth="135.0" text="Name" />
+                              <TableColumn maxWidth="112.0" prefWidth="112.0" text="Date of Birth" />
+                              <TableColumn maxWidth="80.0" text="Sex" />
+                              <TableColumn maxWidth="150.0" prefWidth="150.0" text="NIC" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

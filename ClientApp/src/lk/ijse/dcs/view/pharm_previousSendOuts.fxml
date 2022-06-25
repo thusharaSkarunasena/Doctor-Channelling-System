@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pharm_previousSendOutsAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Pharm_PreviousSendOutsController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="16.0" layoutY="9.0" prefHeight="570.0" prefWidth="450.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="mySendOutsSearchBoxTF" layoutX="207.0" layoutY="14.0" onKeyReleased="#mySendOutsSearchBoxTF_keyReleased" onMouseClicked="#mySendOutsSearchBoxTF_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="378.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="483.0" layoutY="9.0" prefHeight="570.0" prefWidth="450.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TableView fx:id="appointmentDrugDetailsTbl" layoutX="42.0" layoutY="251.0" prefHeight="231.0" prefWidth="380.0">
+                           <columns>
+                              <TableColumn maxWidth="100.0" prefWidth="100.0" text="Drug Code" />
+                              <TableColumn maxWidth="200.0" prefWidth="200.0" text="Description" />
+                              <TableColumn maxWidth="80.0" text="Qty" />
+                           </columns>
+                        </TableView>
+                        <JFXTextArea fx:id="appointmentOtherDescriptionTA" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="25.0" layoutY="139.0" mouseTransparent="true" prefHeight="60.0" prefWidth="400.0" promptText="Appointment Other Description">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="patientIDTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="245.0" layoutY="35.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Patient ID">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="appointmentNumberTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="26.0" layoutY="35.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Appointment Number">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="appointmentTimeTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="245.0" layoutY="83.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Appointment Time">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="appointmentDateTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="26.0" layoutY="83.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Appointment Date">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="24.0" layoutY="220.0" text="Appointment Drug Details" textFill="#8f8f8f" />
+                        <JFXTextArea fx:id="drugOtherDetailsTA" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="40.0" layoutY="506.0" mouseTransparent="true" prefHeight="50.0" prefWidth="385.0" promptText="Drug Other Details">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="mySendOutsTbl" layoutX="37.0" layoutY="61.0" onMouseClicked="#mySendOutsTbl_OnMouseClick" prefHeight="507.0" prefWidth="404.0">
+                     <columns>
+                        <TableColumn prefWidth="109.0" text="Appointment NO" />
+                        <TableColumn maxWidth="200.0" prefWidth="78.0" text="Date" />
+                        <TableColumn maxWidth="100.0" prefWidth="100.0" text="Time" />
+                        <TableColumn maxWidth="116.0" prefWidth="116.0" text="Patient ID" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

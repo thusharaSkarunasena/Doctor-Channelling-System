@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="doctor_manageMedicinesAnchPane" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.Doctor_DrugPackManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="71.0" layoutX="811.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/newPhilipHospitalLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mainTitle" alignment="CENTER" layoutX="295.0" layoutY="15.0" prefHeight="31.0" prefWidth="361.0" style="-fx-text-alignment: center;" text="DOCTOR CHANNELLING SYSTEM" textFill="#0099cc">
+                     <font>
+                        <Font name="Ciutadella Rounded  Regular 2" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backToMainDashIcon" fitHeight="50.0" fitWidth="50.0" layoutX="31.0" layoutY="6.0" onMouseClicked="#backToMainDashIcon_onMouseClicked" onMouseEntered="#backToMainDashIcon_onMouseEntered" onMouseExited="#backToMainDashIcon_onMouseExited">
+                     <image>
+                        <Image url="@../asset/icons8_Back_To_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="698.0" fitWidth="986.0" layoutY="60.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/insideBack.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutY="60.0" opacity="0.8" prefHeight="590.0" prefWidth="950.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="16.0" layoutY="9.0" prefHeight="570.0" prefWidth="450.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="drugItemSearchBoxTF" layoutX="207.0" layoutY="14.0" onKeyReleased="#drugItemSearchBoxTF_keyReleased" onMouseClicked="#drugItemSearchBoxTF_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="378.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="drugItemAddBtn" buttonType="RAISED" layoutX="322.0" layoutY="526.0" onAction="#drugItemAddBtn_onAction" prefHeight="30.0" prefWidth="80.0" styleClass="drugItemAddBtn" stylesheets="@style/doctor_drugpackmanagement.css" text="Add &gt;&gt;&gt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="drugNameTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="240.0" layoutY="483.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Drug Name">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="drugCodeTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="28.0" layoutY="483.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Drug Code">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="483.0" layoutY="9.0" prefHeight="570.0" prefWidth="450.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;">
+                     <children>
+                        <TableView fx:id="packDetailsTbl" layoutX="50.0" layoutY="34.0" onMouseClicked="#packDetailsTbl_OnMouseClick" prefHeight="159.0" prefWidth="249.0">
+                           <columns>
+                              <TableColumn prefWidth="96.0" text="Drug Code" />
+                              <TableColumn maxWidth="200.0" prefWidth="152.0" text="Drug Name" />
+                           </columns>
+                        </TableView>
+                        <JFXButton fx:id="newPackBtn" buttonType="RAISED" layoutX="35.0" layoutY="260.0" onAction="#newPackBtn_onAction" prefHeight="30.0" prefWidth="75.0" styleClass="btnPane-newBtn" stylesheets="@style/doctor_drugpackmanagement.css" text="New">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="savePackBtn" buttonType="RAISED" layoutX="140.0" layoutY="260.0" onAction="#savePackBtn_onAction" prefHeight="30.0" prefWidth="75.0" styleClass="btnPane-saveBtn" stylesheets="@style/doctor_drugpackmanagement.css" text="Save">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="deletePackBtn" buttonType="RAISED" layoutX="345.0" layoutY="260.0" onAction="#deletePackBtn_onAction" prefHeight="30.0" prefWidth="75.0" styleClass="btnPane-deleteBtn" stylesheets="@style/doctor_drugpackmanagement.css" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="updatePackBtn" buttonType="RAISED" layoutX="245.0" layoutY="260.0" onAction="#updatePackBtn_onAction" prefHeight="30.0" prefWidth="75.0" styleClass="btnPane-updateBtn" stylesheets="@style/doctor_drugpackmanagement.css" text="Update">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="packNameTF" focusColor="#00a1cb" labelFloat="true" layoutX="240.0" layoutY="210.0" prefHeight="26.0" prefWidth="180.0" promptText="Pack Name">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="packCodeTF" editable="false" focusColor="#00a1cb" labelFloat="true" layoutX="30.0" layoutY="210.0" mouseTransparent="true" prefHeight="26.0" prefWidth="180.0" promptText="Pack Code">
+                           <font>
+                              <Font name="Times New Roman" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <TextField fx:id="myPacksSearchBoxTF" layoutX="204.0" layoutY="325.0" onKeyReleased="#myPacksSearchBoxTF_keyReleased" onMouseClicked="#myPacksSearchBoxTF_onMouseClick" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="375.0" layoutY="330.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="myPacksTbl" layoutX="40.0" layoutY="360.0" onMouseClicked="#myPacksTbl_OnMouseClick" prefHeight="201.0" prefWidth="385.0">
+                           <columns>
+                              <TableColumn prefWidth="114.0" text="Pack Code" />
+                              <TableColumn maxWidth="288.0" prefWidth="270.0" text="Pack Name" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="21.0" layoutY="10.0" text="My Favourite Packs Management" textFill="#8f8f8f" />
+                        <JFXButton fx:id="deletePackItemBtn" buttonType="RAISED" layoutX="340.0" layoutY="65.0" onAction="#deletePackItemBtn_onAction" prefHeight="30.0" prefWidth="70.0" styleClass="subBtns" stylesheets="@style/doctor_drugpackmanagement.css" text="Delete">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="clearAllPackItemBtn" buttonType="RAISED" layoutX="340.0" layoutY="134.0" onAction="#clearAllPackItemBtn_onAction" prefHeight="30.0" prefWidth="70.0" styleClass="subBtns" stylesheets="@style/doctor_drugpackmanagement.css" text="Clear All">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="drugItemTbl" layoutX="37.0" layoutY="61.0" onMouseClicked="#drugItemTbl_OnMouseClick" prefHeight="409.0" prefWidth="404.0">
+                     <columns>
+                        <TableColumn prefWidth="81.0" text="Drug Code" />
+                        <TableColumn maxWidth="200.0" prefWidth="135.0" text="Drug Name" />
+                        <TableColumn prefWidth="187.0" text="Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

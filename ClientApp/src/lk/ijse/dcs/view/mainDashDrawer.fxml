@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="mainDashDrawer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.7" prefHeight="534.0" prefWidth="60.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dcs.controller.MainDashDrawerController">
+   <children>
+      <HBox accessibleText="userHBox" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8_Male_User_32px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="notificationHBox" layoutY="67.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="10.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Notification_32px_2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="viewMoreHBox" layoutY="134.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_View_More_32px_3.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="logoutHBox" layoutY="200.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Logout_Rounded_Left_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="exitHBox" layoutY="267.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Shutdown_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="settingsHBox" layoutY="336.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Settings_32px_2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="helpHBox" layoutY="406.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css" AnchorPane.topAnchor="406.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Help_32px_6.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox accessibleText="aboutHBox" layoutY="474.0" onMouseClicked="#loadOptions" prefHeight="60.0" prefWidth="60.0" spacing="2.0" styleClass="drawerPane-HBox" stylesheets="@style/maindashdrawer.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../asset/icons8_Info_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

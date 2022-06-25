@@ -1,0 +1,100 @@
+.searchPatientBtn{
+    -fx-background-color: #0099CC;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #0099CC;
+    -fx-border-width: 2;
+}
+
+.searchPatientBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #0099CC;
+    -fx-border-color: #0099CC;
+    -fx-border-width: 2;
+}
+
+.confirmBtn{
+    -fx-background-color: #00BD93;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00BD93;
+    -fx-border-width: 2;
+}
+
+.confirmBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #00BD93;
+    -fx-border-color: #00BD93;
+    -fx-border-width: 2;
+}
+
+
+.printBillBtn{
+    -fx-background-color: #0099CC;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.printBillBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #0099CC;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.doneBtn{
+    -fx-background-color: #00BD93;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.doneBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #00BD93;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.clearBtn{
+    -fx-background-color: #FF7800;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.clearBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #FF7800;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.cancelBtn{
+    -fx-background-color: #DF574B;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.cancelBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #DF574B;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
